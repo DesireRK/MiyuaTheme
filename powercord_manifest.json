@@ -1,0 +1,9 @@
+{
+    "name": "Miyua",
+    "description": "Just a simple little theme with nothing special.",
+    "version": "0.01",
+    "author": "Miyua#3951",
+    "theme": "MiyuaBase.css",
+    "consent": "false",
+    "license": "MIT"
+}

@@ -1,0 +1,139 @@
+/* 
+============================================================================================================
+
+__  __ _                         _____  _                       _   _______ _                         
+|  \/  (_)                       |  __ \(_)                     | | |__   __| |                        
+| \  / |_ _   _ _   _  __ _      | |  | |_ ___  ___ ___  _ __ __| |    | |  | |__   ___ _ __ ___   ___ 
+| |\/| | | | | | | | |/ _` |     | |  | | / __|/ __/ _ \| '__/ _` |    | |  | '_ \ / _ \ '_ ` _ \ / _ \
+| |  | | | |_| | |_| | (_| |     | |__| | \__ \ (_| (_) | | | (_| |    | |  | | | |  __/ | | | | |  __/
+|_|  |_|_|\__, |\__,_|\__,_|     |_____/|_|___/\___\___/|_|  \__,_|    |_|  |_| |_|\___|_| |_| |_|\___|
+           __/ |                                                                                   
+          |___/                                                        
+
+  Miyua (Discord Theme) Ver: 0.01
+    
+   Author: Miyua#3951 (395422901878390785)
+    
+    Info: Miyua is just a simple little theme, named after my Discord Username. it's nothing much. it only
+          really exists to help me learn CSS as well as how to theme Discord. But i eventually hope to be 
+          create better themes for people to use. 
+
+     Credits: Pavy, for being cute
+              CorellanStoma, for helping me out with CSS Questions i had
+              You, for using my theme 
+
+============================================================================================================
+*/
+
+
+
+:root{
+  /* Dark Mode Base Colors & Accents (you can easily change the colors of the dark theme below)*/ 
+
+--bg2d: #1a1822; /* Secondary background color for stuff like channel list and member drawer in dark mode */
+--bg1d: #1e1d29; /* Main background color for stuff like chat in dark mode*/
+--bgad: #121216; /* Main accent color of the theme in dark mode*/
+--bga2d: ; /* Secondary accent color of the theme in dark mode*/
+
+/* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
+
+--bg2l: #e1e2d6 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--bg1l: #D1DEE2 ;  /* Main background color for stuff like chat in light mode */
+--bgal: #d1dee2; /* Main accent color of the theme in dark mode*/
+--bga2l: ; /* Secondary accent color of the theme in dark mode*/
+}
+
+
+
+/* Applying The Dark Mode Base Colors To Discord's Dark Mode */
+
+.theme-dark {
+--background-primary: var(--bg1d);
+--background-secondary: var(--bg2d);
+--background-tertiary:  var(--bg2d);
+--background-secondary-alt: var(--bg2d);
+--channeltextarea-background: var(--bg2d); 
+--scrollbar-thin-thumb: var(--bgad);
+--scrollbar-thin-track: transparent;
+--scrollbar-auto-thumb: var(--bgad);
+--scrollbar-auto-track: transparent;
+--scrollbar-auto-scrollbar-color-thumb: var(--bgad);
+--scrollbar-auto-scrollbar-color-track: var(--bg2d);
+--background-message-hover: var(--bg2d);
+--background-accent: var(--bgad);
+}
+
+.theme-light {
+  --background-primary: var(--bg1l);
+  --background-secondary: var(--bg2l);
+  --background-secondary-alt: var(--bga2l);
+  --background-tertiary: var(--bg2l);
+  --channeltextarea-background: var(--bg2l); 
+  --scrollbar-thin-thumb: var(--bgal);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: var(--bgal);
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: var(--bgal);
+  --scrollbar-auto-scrollbar-color-track: var(--bg2l);
+  --background-message-hover: var(--bg2l);
+  --background-accent: var(--bgal);
+} 
+
+/* sets the top bar's color */
+.chatContent-a9vAAp { 
+  background-color: var(--background-primary)
+  }
+  
+  .chat-3bRxxu {
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 10px;} /* rounds the chat */
+  
+  .content-98HsJk {
+    margin-bottom: 0px;
+  } /* content background */
+  
+  .scrollableContainer-2NUZem, .searchBar-3dMhjb {
+    border-radius: 20px;
+    background-color: var(--background-accent);
+  } /* rounded chat box & search bar */
+  
+  .container-1r6BKw { 
+   border-radius: 20px
+  }  
+  
+  .members-1998pB, .members-1998pB>div {
+    background-color: var(--background-primary)
+  }
+  
+  .scroller-1Bvpku { 
+    margin-bottom: 10px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--background-primary);
+  } /* server list */
+  
+  .headerText-2F0828, .name-3l27Hl {
+    text-align: center;
+  }
+  
+  .sidebar-2K8pFh {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  
+  .panels-j1Uci_{ 
+    background-color: var(--background-accent);
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: -5px;
+  } /* User panel / spotify */
+  
+  .theme-dark .container-1D34oG {
+    background-color: var(--background-primary);
+  }
+  .headerTop-3C2Zn0 {
+    background-color: var(--background-accent);
+  } /* user popout top */
+  
+  .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
+    background-color: var(--background-secondary);
+  } /* user popout bottom */
+
