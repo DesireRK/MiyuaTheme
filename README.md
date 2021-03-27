@@ -12,4 +12,4 @@ Light mode:
 ## Installation
 
 Paste the following into command prompt:  
-`git clone https://github.com/MiyFr/MiyuaTheme.git'
+`git clone https://github.com/MiyFr/MiyuaTheme.git` 
