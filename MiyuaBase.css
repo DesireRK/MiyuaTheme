@@ -39,8 +39,8 @@ __  __ _                         _____  _                       _   _______ _
 
 /* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
 
---bg2l: #eeecec ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
---bg1l: #ffffff ;  /* Main background color for stuff like chat in light mode */
+--bg2l: #dce4e9 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--bg1l: #eeecec ;  /* Main background color for stuff like chat in light mode */
 --bgal: #eeecec; /* Main accent color of the theme in dark mode*/
 --bga2l: #ca8282; /* Secondary accent color of the theme in dark mode*/
 }
@@ -100,12 +100,15 @@ __  __ _                         _____  _                       _   _______ _
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 10px;} 
   
- /* Rounding the chat field & Search bar, adding a border radius */
-  .scrollableContainer-2NUZem, .searchBar-3dMhjb {
+ /* Rounding the chat field & Search bar, Profile message feild adding a border radius,  */
+  .scrollableContainer-2NUZem, .searchBar-3dMhjb, .container-2fRDfG, .inputWrapper-31_8H8 {
     border-radius: 20px;
     background-color: var(--background-accent);
   } 
-  
+  .container-2fRDfG {
+    margin-bottom: 10px;
+  }
+
   .container-1r6BKw { 
    border-radius: 20px
   }  
@@ -168,4 +171,13 @@ __  __ _                         _____  _                       _   _______ _
 
  .channelTextAreaDisabled-8rmlrp, .scrollableContainer-2NUZem {
    opacity: none;
+ }
+
+ .container-2fRDfG {
+   padding-bottom: 10xp;
+ }
+
+ /* playing status recolor */
+ .headerPlaying-j0WQBV {
+   background-color: var(--background-primary);
  }
