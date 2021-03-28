@@ -21,6 +21,8 @@ __  __ _                         _____  _                       _   _______ _
      Credits: Pavy, for being cute
               CorellanStoma, for helping me out with CSS Questions i had
               You, for using my theme 
+      
+       Note: I know my code's a mess, please don't bully?
 
 ============================================================================================================
 */
@@ -65,7 +67,10 @@ __  __ _                         _____  _                       _   _______ _
 --toast-header: var(--bgad);
 --toast-contents: var(--bg2d);
 --toast-background: var(--bg2d);
+--deprecated-quickswitcher-input-background: var(--bgad);
 }
+
+/* Applying The Light Mode Base Colors To Discord's Light Mode */
 
 .theme-light {
   --background-primary: var(--bg1l);
@@ -85,25 +90,21 @@ __  __ _                         _____  _                       _   _______ _
   --toast-header: var(--bgal);
   --toast-contents: var(--bg2l);
   --toast-background: var(--bg2l);
+  --deprecated-quickswitcher-input-background: var(--bgal);
 } 
 
-/* sets the top bar's color */
-.chatContent-a9vAAp { 
-  background-color: var(--background-primary)
-  }
-  
+
+
+  /* Rounding the chat area as well as adding a bottom margin  */
   .chat-3bRxxu {
     border-radius: 20px 0px 0px 20px;
-    margin-bottom: 10px;} /* rounds the chat */
+    margin-bottom: 10px;} 
   
-  .content-98HsJk {
-    margin-bottom: 0px;
-  } /* content background */
-  
+ /* Rounding the chat field & Search bar, adding a border radius */
   .scrollableContainer-2NUZem, .searchBar-3dMhjb {
     border-radius: 20px;
     background-color: var(--background-accent);
-  } /* rounded chat box & search bar */
+  } 
   
   .container-1r6BKw { 
    border-radius: 20px
@@ -117,34 +118,54 @@ __  __ _                         _____  _                       _   _______ _
     margin-bottom: 10px;
     border-radius: 0px 20px 20px 0px;
     background-color: var(--background-primary);
-  } /* server list */
+  }
+   /* Server List */
   
   .headerText-2F0828, .name-3l27Hl {
     text-align: center;
   }
   
+
+  /* Channel list? padding */
+
   .sidebar-2K8pFh {
     padding-left: 11px;
     padding-right: 11px;
   }
   
+  /* User Panel / Spotify */
   .panels-j1Uci_{ 
     background-color: var(--background-accent);
     border-radius: 20px 20px 0px 0px;
     margin-bottom: -5px;
-  } /* User panel / spotify */
+  } 
   
   .theme-dark .container-1D34oG {
     background-color: var(--background-primary);
   }
+
+  /* User popout top */
   .headerTop-3C2Zn0 {
     background-color: var(--background-accent);
-  } /* user popout top */
+  } 
   
+  /* User popout bottom */
+
   .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
     background-color: var(--background-secondary);
-  } /* user popout bottom */
+  } 
 
   .section-2gLsgF {
     background-color: var(--background-accent);
   }
+
+  /* DM list Search */
+  .searchBarComponent-32dTOx {
+     background-color: var(--background-accent) !important;
+  }
+
+ /* Remove opacity from text area when no pems to talk */
+
+ .channelTextAreaDisabled-8rmlrp, .scrollableContainer-2NUZem {
+   opacity: none;
+ }
