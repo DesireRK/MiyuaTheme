@@ -29,18 +29,18 @@ __  __ _                         _____  _                       _   _______ _
 
 :root{
   /* Dark Mode Base Colors & Accents (you can easily change the colors of the dark theme below)*/ 
-
+--spotify-color: #ffb347;
 --bg2d: #1a1822; /* Secondary background color for stuff like channel list and member drawer in dark mode */
 --bg1d: #1e1d29; /* Main background color for stuff like chat in dark mode*/
 --bgad: #121216; /* Main accent color of the theme in dark mode*/
---bga2d: ; /* Secondary accent color of the theme in dark mode*/
+--bga2d:#ff6961; /* Secondary accent color of the theme in dark mode*/
 
 /* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
 
---bg2l: #e1e2d6 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
---bg1l: #D1DEE2 ;  /* Main background color for stuff like chat in light mode */
---bgal: #d1dee2; /* Main accent color of the theme in dark mode*/
---bga2l: ; /* Secondary accent color of the theme in dark mode*/
+--bg2l: #eeecec ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--bg1l: #ffffff ;  /* Main background color for stuff like chat in light mode */
+--bgal: #eeecec; /* Main accent color of the theme in dark mode*/
+--bga2l: #ca8282; /* Secondary accent color of the theme in dark mode*/
 }
 
 
@@ -61,6 +61,10 @@ __  __ _                         _____  _                       _   _______ _
 --scrollbar-auto-scrollbar-color-track: var(--bg2d);
 --background-message-hover: var(--bg2d);
 --background-accent: var(--bgad);
+--activity-card-background: var(--bga2d);
+--toast-header: var(--bgad);
+--toast-contents: var(--bg2d);
+--toast-background: var(--bg2d);
 }
 
 .theme-light {
@@ -77,6 +81,10 @@ __  __ _                         _____  _                       _   _______ _
   --scrollbar-auto-scrollbar-color-track: var(--bg2l);
   --background-message-hover: var(--bg2l);
   --background-accent: var(--bgal);
+  --activity-card-background: var(--bga2l);
+  --toast-header: var(--bgal);
+  --toast-contents: var(--bg2l);
+  --toast-background: var(--bg2l);
 } 
 
 /* sets the top bar's color */
@@ -137,3 +145,6 @@ __  __ _                         _____  _                       _   _______ _
     background-color: var(--background-secondary);
   } /* user popout bottom */
 
+  .section-2gLsgF {
+    background-color: var(--background-accent);
+  }
