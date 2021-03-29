@@ -69,6 +69,21 @@ __  __ _                         _____  _                       _   _______ _
 --toast-background: var(--bg2d);
 --deprecated-quickswitcher-input-background: var(--bgad);
 }
+/* Autocomplete / Emoji area */
+
+.theme-dark .autocomplete-1vrmpx {
+  background-color: var(--background-accent);
+  border-radius: 20px;
+}
+/* Selection Highlight */
+.theme-dark .selected-1Tbx07 {
+ background-color: var(--background-primary);
+}
+
+
+
+
+
 
 /* Applying The Light Mode Base Colors To Discord's Light Mode */
 
@@ -92,13 +107,23 @@ __  __ _                         _____  _                       _   _______ _
   --toast-background: var(--bg2l);
   --deprecated-quickswitcher-input-background: var(--bgal);
 } 
+/* Autocomplete / Emoji area */
 
+.theme-light .autocomplete-1vrmpx {
+  background-color: var(--background-accent);
+  border-radius: 20px;
+}
+/* Selection Highlight */
+.theme-light .selected-1Tbx07 {
+ background-color: var(--background-primary);
+}
 
 
   /* Rounding the chat area as well as adding a bottom margin  */
   .chat-3bRxxu {
     border-radius: 20px 0px 0px 20px;
-    margin-bottom: 10px;} 
+    margin-bottom: 10px;
+  } 
   
  /* Rounding the chat field & Search bar, Profile message feild adding a border radius,  */
   .scrollableContainer-2NUZem, .searchBar-3dMhjb, .container-2fRDfG, .inputWrapper-31_8H8 {
@@ -121,15 +146,23 @@ __  __ _                         _____  _                       _   _______ _
     margin-bottom: 10px;
     border-radius: 0px 20px 20px 0px;
     background-color: var(--background-primary);
+
   }
-   /* Server List */
+   /* DM User List */
   
-  .headerText-2F0828, .name-3l27Hl {
+  .headerText-2F0828 {
     text-align: center;
+    padding-left: 16px;
+  }
+  
+  /* Server CHannel List */
+  .name-3l27Hl {
+    text-align: center;
+    padding-right: 12px;
   }
   
 
-  /* Channel list? padding */
+  /* Channel list side bar  padding */
 
   .sidebar-2K8pFh {
     padding-left: 11px;
@@ -179,5 +212,43 @@ __  __ _                         _____  _                       _   _______ _
 
  /* playing status recolor */
  .headerPlaying-j0WQBV {
-   background-color: var(--background-primary);
+   background-color: var(--background-secondary);
  }
+
+ /* Rounded Jump to bottom */
+ .jumpToPresentBar-G1R9s6 {
+   border-radius: 20px;
+   padding-bottom: 0px;
+   margin-bottom: 12px;
+ }
+
+ /* Remove shadows from content area */
+ .content-yTz4x3:before {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+ }
+
+ /* rounded and colored toolbar */
+ .container-1r6BKw.themed-ANHk51 {
+   background-color: var(--background-accent);
+   border-radius: 0px 0px 0px 20px;
+   margin-right: 20px;
+   margin-left: 0px;
+ }
+
+ /* Toobar Shadow */
+ .children-19S4PO:after { 
+   display: none;
+ }
+
+ /* Autocomplete / Emoji area */
+
+ .theme-dark .autocomplete-1vrmpx {
+   background-color: var(--background-accent);
+   border-radius: 20px;
+ }
+/* Selection Highlight */
+.theme-dark .selected-1Tbx07 {
+  background-color: var(--background-primary);
+}
