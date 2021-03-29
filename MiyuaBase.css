@@ -10,7 +10,7 @@ __  __ _                         _____  _                       _   _______ _
            __/ |                                                                                   
           |___/                                                        
 
-  Miyua (Discord Theme) Ver: 0.01
+  Miyua (Discord Theme) Version: 0.02
     
    Author: Miyua#3951 (395422901878390785)
     
@@ -22,7 +22,7 @@ __  __ _                         _____  _                       _   _______ _
               CorellanStoma, for helping me out with CSS Questions i had
               You, for using my theme 
       
-       Note: I know my code's a mess, please don't bully?
+       Note: I know everything below is a mess, unorganized. please don't bully?
 
 ============================================================================================================
 */
@@ -37,8 +37,8 @@ __  __ _                         _____  _                       _   _______ _
 --bgad: #121216; /* Main accent color of the theme in dark mode*/
 --bga2d:#ff6961; /* Secondary accent color of the theme in dark mode*/
 
-/* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
 
+/* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
 --bg2l: #dce4e9 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
 --bg1l: #eeecec ;  /* Main background color for stuff like chat in light mode */
 --bgal: #eeecec; /* Main accent color of the theme in dark mode*/
@@ -47,8 +47,9 @@ __  __ _                         _____  _                       _   _______ _
 
 
 
-/* Applying The Dark Mode Base Colors To Discord's Dark Mode */
 
+
+/* Applying The Dark Mode Base Colors To Discord's Dark Mode */
 .theme-dark {
 --background-primary: var(--bg1d);
 --background-secondary: var(--bg2d);
@@ -68,17 +69,24 @@ __  __ _                         _____  _                       _   _______ _
 --toast-contents: var(--bg2d);
 --toast-background: var(--bg2d);
 --deprecated-quickswitcher-input-background: var(--bgad);
+--background-modifier-selected: #ff696120;
+--background-modifier-hover: 
 }
-/* Autocomplete / Emoji area */
 
+/* Autocomplete / Emoji area recolor and border rounding */
 .theme-dark .autocomplete-1vrmpx {
   background-color: var(--background-accent);
   border-radius: 20px;
 }
-/* Selection Highlight */
+
+/* Selection Highlight recolor */
 .theme-dark .selected-1Tbx07 {
  background-color: var(--background-primary);
 }
+.theme-dark .root-1gCeng {
+  background-color: var(--background-secondary);
+}
+
 
 
 
@@ -86,7 +94,6 @@ __  __ _                         _____  _                       _   _______ _
 
 
 /* Applying The Light Mode Base Colors To Discord's Light Mode */
-
 .theme-light {
   --background-primary: var(--bg1l);
   --background-secondary: var(--bg2l);
@@ -106,20 +113,29 @@ __  __ _                         _____  _                       _   _______ _
   --toast-contents: var(--bg2l);
   --toast-background: var(--bg2l);
   --deprecated-quickswitcher-input-background: var(--bgal);
+  --background-modifier-selected: ;
 } 
 /* Autocomplete / Emoji area */
-
 .theme-light .autocomplete-1vrmpx {
   background-color: var(--background-accent);
   border-radius: 20px;
 }
+
 /* Selection Highlight */
 .theme-light .selected-1Tbx07 {
  background-color: var(--background-primary);
 }
 
+.theme-light .root-1gCeng {
+  background-color: var(--background-secondary);
+}
 
-  /* Rounding the chat area as well as adding a bottom margin  */
+ /* ///////////// */
+ /* Other Stuffs */
+ /* /////////// */
+  
+ 
+ /* Rounding The Chat Content Area As well as adding a bottom margin  */
   .chat-3bRxxu {
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 10px;
@@ -148,19 +164,23 @@ __  __ _                         _____  _                       _   _______ _
     background-color: var(--background-primary);
 
   }
-   /* DM User List */
+   /* DM User List Title Text */
   
   .headerText-2F0828 {
     text-align: center;
     padding-left: 16px;
   }
   
-  /* Server CHannel List */
+  /* Server Channel List Text */
   .name-3l27Hl {
     text-align: center;
     padding-right: 12px;
   }
   
+  /* Server Role Name Center */
+  .membersGroup-v9BXpm {
+    text-align: center;
+  }
 
   /* Channel list side bar  padding */
 
@@ -175,7 +195,11 @@ __  __ _                         _____  _                       _   _______ _
     border-radius: 20px 20px 0px 0px;
     margin-bottom: -5px;
   } 
-  
+  /* User Panel Buttons Recolor */
+  .button-14-BFJ {
+    color:var(--spotify-color);
+  }
+
   .theme-dark .container-1D34oG {
     background-color: var(--background-primary);
   }
@@ -222,8 +246,8 @@ __  __ _                         _____  _                       _   _______ _
    margin-bottom: 12px;
  }
 
- /* Remove shadows from content area */
- .content-yTz4x3:before {
+ /* Remove shadows from content area, friends list ect */
+ .content-yTz4x3:before, .tabBody-3YRQ8W:before {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -232,7 +256,7 @@ __  __ _                         _____  _                       _   _______ _
  /* rounded and colored toolbar */
  .container-1r6BKw.themed-ANHk51 {
    background-color: var(--background-accent);
-   border-radius: 0px 0px 0px 20px;
+   border-radius: 20px 0px 0px 20px;
    margin-right: 20px;
    margin-left: 0px;
  }
@@ -251,4 +275,15 @@ __  __ _                         _____  _                       _   _______ _
 /* Selection Highlight */
 .theme-dark .selected-1Tbx07 {
   background-color: var(--background-primary);
+}
+
+/* Popup idk which one */
+.theme-dark .root-1gCeng {
+  background-color: var(--background-secondary);
+}
+
+/* Emoji Menu */
+
+.wrapper-2aW0bm {
+  border-radius: 20px;
 }
