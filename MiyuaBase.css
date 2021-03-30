@@ -30,19 +30,22 @@ __  __ _                         _____  _                       _   _______ _
 
 
 :root{
+  --spotify-color: var(--bga2d) !important;  
   /* Dark Mode Base Colors & Accents (you can easily change the colors of the dark theme below)*/ 
---spotify-color: #ffb347;
---bg2d: #1a1822; /* Secondary background color for stuff like channel list and member drawer in dark mode */
---bg1d: #1e1d29; /* Main background color for stuff like chat in dark mode*/
---bgad: #121216; /* Main accent color of the theme in dark mode*/
---bga2d:#ff6961; /* Secondary accent color of the theme in dark mode*/
+
+--bg2d:#141B2C; /* Secondary background color for stuff like channel list and member drawer in dark mode */
+--bg1d:#1E2334; /* Main background color for stuff like chat in dark mode*/
+--bgad:#0D1323; /* Main accent color of the theme in dark mode*/
+--bga2d:#DE0F61; /* Secondary accent color of the theme in dark mode*/
+--bga2dh:#DE0F6146;
+
 
 
 /* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
---bg2l: #dce4e9 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
---bg1l: #eeecec ;  /* Main background color for stuff like chat in light mode */
---bgal: #eeecec; /* Main accent color of the theme in dark mode*/
---bga2l: #ca8282; /* Secondary accent color of the theme in dark mode*/
+--bg2l: #b8b9bd ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--bg1l: #abaeb4 ;  /* Main background color for stuff like chat in light mode */
+--bgal: #9c9da0; /* Main accent color of the theme in dark mode*/
+--bga2l: #B7174E; /* Secondary accent color of the theme in dark mode*/
 }
 
 
@@ -69,8 +72,8 @@ __  __ _                         _____  _                       _   _______ _
 --toast-contents: var(--bg2d);
 --toast-background: var(--bg2d);
 --deprecated-quickswitcher-input-background: var(--bgad);
---background-modifier-selected: #ff696120;
---background-modifier-hover: 
+--background-modifier-selected: var(--bga2dh); 
+--background-modifier-hover: ;
 }
 
 /* Autocomplete / Emoji area recolor and border rounding */
@@ -85,6 +88,7 @@ __  __ _                         _____  _                       _   _______ _
 }
 .theme-dark .root-1gCeng {
   background-color: var(--background-secondary);
+  
 }
 
 
@@ -154,8 +158,13 @@ __  __ _                         _____  _                       _   _______ _
    border-radius: 20px
   }  
   
+  /* Server Memeber List */
   .members-1998pB, .members-1998pB>div {
-    background-color: var(--background-primary)
+    background-color: var(--background-secondary);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px 0px 0px 20px;
+    margin-right: 0px;
   }
   
   .scroller-1Bvpku { 
@@ -180,6 +189,8 @@ __  __ _                         _____  _                       _   _______ _
   /* Server Role Name Center */
   .membersGroup-v9BXpm {
     text-align: center;
+    height: 20px;
+    padding-top: 0px 8px 0 16px;
   }
 
   /* Channel list side bar  padding */
@@ -192,12 +203,13 @@ __  __ _                         _____  _                       _   _______ _
   /* User Panel / Spotify */
   .panels-j1Uci_{ 
     background-color: var(--background-accent);
-    border-radius: 20px 20px 0px 0px;
-    margin-bottom: -5px;
+    border-radius: 40px;
+    margin-bottom: 15px;
+    padding-top: -10px;
   } 
   /* User Panel Buttons Recolor */
   .button-14-BFJ {
-    color:var(--spotify-color);
+    color:var(--bga2d);
   }
 
   .theme-dark .container-1D34oG {
@@ -285,5 +297,11 @@ __  __ _                         _____  _                       _   _______ _
 /* Emoji Menu */
 
 .wrapper-2aW0bm {
+  border-radius: 20px;
+}
+
+
+/* Rounded Selectors */
+.modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n{
   border-radius: 20px;
 }
