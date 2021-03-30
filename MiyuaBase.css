@@ -90,6 +90,9 @@ __  __ _                         _____  _                       _   _______ _
   background-color: var(--background-secondary);
   
 }
+.theme-dark .container-3ayLPN {
+  background-color: var(--bgad);
+}
 
 
 
@@ -133,6 +136,13 @@ __  __ _                         _____  _                       _   _______ _
 .theme-light .root-1gCeng {
   background-color: var(--background-secondary);
 }
+.theme-light .container-3ayLPN {
+  background-color: var(--bgal);
+}
+
+
+
+
 
  /* ///////////// */
  /* Other Stuffs */
@@ -164,7 +174,6 @@ __  __ _                         _____  _                       _   _______ _
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 20px 0px 0px 20px;
-    margin-right: 0px;
   }
   
   .scroller-1Bvpku { 
@@ -190,7 +199,7 @@ __  __ _                         _____  _                       _   _______ _
   .membersGroup-v9BXpm {
     text-align: center;
     height: 20px;
-    padding-top: 0px 8px 0 16px;
+    padding-top: 0px 8px 0px 16px;
   }
 
   /* Channel list side bar  padding */
@@ -203,7 +212,6 @@ __  __ _                         _____  _                       _   _______ _
   /* User Panel / Spotify */
   .panels-j1Uci_{ 
     background-color: var(--background-accent);
-    border-radius: 40px;
     margin-bottom: 15px;
     padding-top: -10px;
   } 
@@ -304,4 +312,35 @@ __  __ _                         _____  _                       _   _______ _
 /* Rounded Selectors */
 .modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n{
   border-radius: 20px;
+}
+
+/* Search Menu Rounding and Top Margin */
+.container-3ayLPN {
+ border-radius: 20px;
+ margin-top: 20px;
+}
+/* Search Menu Text Shadow */
+.option-96V44q:after {
+  display: none;
+}
+/* Search Menu Box Shadow */
+.elevationBorderHigh-2WYJ09 {
+  box-shadow: none;
+}
+/* Search Menu Item Select */
+.theme-dark .option-96V44q.selected-rZcOL- {
+  background-color: var(--bga2dh);
+  border-radius: 40px;
+}
+/* Search Filter/Item Background */
+.theme-dark .searchFilter-2ESiM3 {
+  background-color: var(--bga2d);
+}
+.theme-dark .searchAnswer-3Dz2-q {
+  background-color: var(--bga2dh);
+}
+
+
+.icon-22AiRD {
+  color: var(--bga2d);
 }
