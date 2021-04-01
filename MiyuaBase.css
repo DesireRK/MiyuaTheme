@@ -1,3 +1,5 @@
+
+
 /* 
 ============================================================================================================
 
@@ -38,14 +40,16 @@ __  __ _                         _____  _                       _   _______ _
 --bgad:#0D1323; /* Main accent color of the theme in dark mode*/
 --bga2d:#DE0F61; /* Secondary accent color of the theme in dark mode*/
 --bga2dh:#DE0F6146;
-
+--bga2dhsl: #de0f6215;
 
 
 /* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
---bg2l: #b8b9bd ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
---bg1l: #abaeb4 ;  /* Main background color for stuff like chat in light mode */
---bgal: #9c9da0; /* Main accent color of the theme in dark mode*/
+--bg2l: #fcf4e2 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--bg1l: #fbf7ed ;  /* Main background color for stuff like chat in light mode */
+--bgal: #fcefd7; /* Main accent color of the theme in dark mode*/
 --bga2l: #B7174E; /* Secondary accent color of the theme in dark mode*/
+--bga2lh:#DE0F6146;
+--bga2lhsl: #de0f6215;
 }
 
 
@@ -65,7 +69,7 @@ __  __ _                         _____  _                       _   _______ _
 --scrollbar-auto-track: transparent;
 --scrollbar-auto-scrollbar-color-thumb: var(--bgad);
 --scrollbar-auto-scrollbar-color-track: var(--bg2d);
---background-message-hover: var(--bg2d);
+--background-message-hover: var(--bga2dh);
 --background-accent: var(--bgad);
 --activity-card-background: var(--bga2d);
 --toast-header: var(--bgad);
@@ -73,27 +77,11 @@ __  __ _                         _____  _                       _   _______ _
 --toast-background: var(--bg2d);
 --deprecated-quickswitcher-input-background: var(--bgad);
 --background-modifier-selected: var(--bga2dh); 
---background-modifier-hover: ;
+--background-modifier-hover: var(--bga2dhsl);
+--background-modifier-active: var(--bga2dhsl);
+--background-floating: var(--bg1d);
+--deprecated-store-bg: var(--bg1d);
 }
-
-/* Autocomplete / Emoji area recolor and border rounding */
-.theme-dark .autocomplete-1vrmpx {
-  background-color: var(--background-accent);
-  border-radius: 20px;
-}
-
-/* Selection Highlight recolor */
-.theme-dark .selected-1Tbx07 {
- background-color: var(--background-primary);
-}
-.theme-dark .root-1gCeng {
-  background-color: var(--background-secondary);
-  
-}
-.theme-dark .container-3ayLPN {
-  background-color: var(--bgad);
-}
-
 
 
 
@@ -113,49 +101,60 @@ __  __ _                         _____  _                       _   _______ _
   --scrollbar-auto-track: transparent;
   --scrollbar-auto-scrollbar-color-thumb: var(--bgal);
   --scrollbar-auto-scrollbar-color-track: var(--bg2l);
-  --background-message-hover: var(--bg2l);
   --background-accent: var(--bgal);
-  --activity-card-background: var(--bga2l);
+  --background-message-hover: var(--bga2lh);
   --toast-header: var(--bgal);
   --toast-contents: var(--bg2l);
   --toast-background: var(--bg2l);
   --deprecated-quickswitcher-input-background: var(--bgal);
-  --background-modifier-selected: ;
+  --background-modifier-hover: var(--bga2lhsl);
+  --background-modifier-active: var(--bga2lhsl);
+  --background-floating: var(--bg1l);
+  --deprecated-store-bg: var(--bg1l);
 } 
-/* Autocomplete / Emoji area */
-.theme-light .autocomplete-1vrmpx {
-  background-color: var(--background-accent);
-  border-radius: 20px;
-}
-
-/* Selection Highlight */
-.theme-light .selected-1Tbx07 {
- background-color: var(--background-primary);
-}
-
-.theme-light .root-1gCeng {
-  background-color: var(--background-secondary);
-}
-.theme-light .container-3ayLPN {
-  background-color: var(--bgal);
-}
 
 
 
 
-
- /* ///////////// */
- /* Other Stuffs */
- /* /////////// */
-  
+/* //////////////////////////////////////////////////////////////////////////////////////// */
  
- /* Rounding The Chat Content Area As well as adding a bottom margin  */
+
+
+
+
+
+ /* Other CSS Stuffs */
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+
+ /*
+
+
+M A I N   C H A T   C O N T E N T   A R E A 
+
+
+*/
+
+
+
+/* Colors the Chat Icon Next To The Channel Name */
+.icon-22AiRD {
+  color: var(--bga2d);
+}
+
+/* Rounding The Chat Content Area As well As Adding A Bottom Margin  */
   .chat-3bRxxu {
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 10px;
   } 
   
- /* Rounding the chat field & Search bar, Profile message feild adding a border radius,  */
+/* Rounding The Chat Field & Search Bar, Profile Message Feild Adding A Border Radius,  */
   .scrollableContainer-2NUZem, .searchBar-3dMhjb, .container-2fRDfG, .inputWrapper-31_8H8 {
     border-radius: 20px;
     background-color: var(--background-accent);
@@ -168,14 +167,30 @@ __  __ _                         _____  _                       _   _______ _
    border-radius: 20px
   }  
   
-  /* Server Memeber List */
+/* Server Memeber List */
   .members-1998pB, .members-1998pB>div {
     background-color: var(--background-secondary);
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 20px 0px 0px 20px;
   }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Server List Area */
   .scroller-1Bvpku { 
     margin-bottom: 10px;
     border-radius: 0px 20px 20px 0px;
@@ -199,7 +214,7 @@ __  __ _                         _____  _                       _   _______ _
   .membersGroup-v9BXpm {
     text-align: center;
     height: 20px;
-    padding-top: 0px 8px 0px 16px;
+    padding: 0px 8px 0px 16px;
   }
 
   /* Channel list side bar  padding */
@@ -214,6 +229,7 @@ __  __ _                         _____  _                       _   _______ _
     background-color: var(--background-accent);
     margin-bottom: 15px;
     padding-top: -10px;
+    border-radius: 20px;
   } 
   /* User Panel Buttons Recolor */
   .button-14-BFJ {
@@ -314,6 +330,18 @@ __  __ _                         _____  _                       _   _______ _
   border-radius: 20px;
 }
 
+
+
+/*
+
+
+S E A R C H   M E N U 
+
+
+*/
+
+
+
 /* Search Menu Rounding and Top Margin */
 .container-3ayLPN {
  border-radius: 20px;
@@ -328,19 +356,157 @@ __  __ _                         _____  _                       _   _______ _
   box-shadow: none;
 }
 /* Search Menu Item Select */
-.theme-dark .option-96V44q.selected-rZcOL- {
+.theme-dark .option-96V44q.selected-rZcOL-, .theme-light .option-96V44q.selected-rZcOL- {
   background-color: var(--bga2dh);
   border-radius: 40px;
 }
 /* Search Filter/Item Background */
-.theme-dark .searchFilter-2ESiM3 {
+.theme-dark .searchFilter-2ESiM3, .theme-light .searchFilter-2ESiM3 {
   background-color: var(--bga2d);
 }
-.theme-dark .searchAnswer-3Dz2-q {
+.theme-dark .searchAnswer-3Dz2-q, .theme-light .searchAnswer-3Dz2-q {
   background-color: var(--bga2dh);
+}
+.theme-dark .focused-2bY0OD, .theme-light .focused-2bY0OD {
+  background-color: var(--bgad);
+}
+/* Calander Fix */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker, .theme-light .calendarPicker-2yf6Ci .react-datepicker {
+  background-color: var(--background-primary);
 }
 
 
-.icon-22AiRD {
-  color: var(--bga2d);
+/* DM list person highlight */
+.selected-aXhQR6 .layout-2DM8Md {
+  border-radius: 40px;
+}
+/* DM list person hover */
+.clickable-1JJAn8:active .layout-2DM8Md {
+  border-radius: 40px;
+  background-color: var(--background-modifier-hover) ;
+}
+
+/* Message Hover */ 
+.message-2qnXI6:hover {
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+
+
+/* Autocomplete / Emoji area recolor and border rounding */
+.theme-dark .autocomplete-1vrmpx, .theme-light .autocomplete-1vrmpx {
+  background-color: var(--background-accent);
+  border-radius: 20px;
+}
+
+/* Selection Highlight recolor */
+.theme-dark .selected-1Tbx07, .theme-light .selected-1Tbx07 {
+ background-color: var(--background-primary);
+}
+.theme-dark .root-1gCeng, .theme-light .root-1gCeng {
+  background-color: var(--background-secondary);
+  
+}
+.theme-dark .container-3ayLPN, .theme-light .container-3ayLPN {
+  background-color: var(--bgad);
+}
+
+
+
+/* Removing Borders From Input Fields in Modals  */
+.multiInput-2AiDV2 { 
+  border: none;
+  background-color: transparent;
+} 
+
+.input-cIJ7To { 
+  border: none;
+  background-color: transparent;
+}
+
+.theme-dark .footer-2gL1pp, .theme-light .footer-2gL1pp {
+  background-color: var(--background-secondary);
+}
+/* Discord Home Logo */
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+  background-color: #DE0F61;
+}
+
+
+.wrapper-2jXpOf:active .content-1x5b-n {
+  border-radius: 40px;
+}
+
+
+
+
+/* 
+
+
+S T O R E   P A G E 
+
+
+*/
+
+
+/* Tool Bar BG Fix */
+.theme-dark .container-1D34oG, .theme-light .container-1D34oG {
+  background-color: var(--background-primary);
+  border-radius: 20px 0px 0px 0px;
+}
+
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6, .theme-light .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+  background-color: var(--activity-card-background);
+}
+ 
+
+
+/* 
+
+
+L I B A R Y   P A G E 
+
+
+*/
+
+
+
+/* Hide the Webkit Shadow */
+.libraryHeader-3g95kE:before {
+  display: none;
+}
+
+
+
+/* 
+
+
+F R I E N D S   P A G E 
+
+
+*/
+
+/* Activity Highlight */ 
+.theme-dark .outer-1AjyKL.interactive-3B9GmY:hover, .theme-light .outer-1AjyKL.interactive-3B9GmY:hover {
+  background-color: var(--background-message-hover);
+  border-radius: 20px;
+}
+
+/* Person List Hightlight */
+.peopleListItem-2nzedh:hover {
+  border-radius: 20px;
+}
+
+/* DM list person highlight */
+.clickable-1JJAn8:hover .layout-2DM8Md {
+  border-radius: 20px;
+}
+
+.theme-dark .uploadModal-2ifh8j, .theme-light .uploadModal-2ifh8j {
+  background-color: var(--background-primary);
+}
+
+.uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC {
+  background-color: var(--background-primary);
 }
