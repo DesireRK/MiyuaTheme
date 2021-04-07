@@ -1,3 +1,90 @@
+/* 
+
+A D D O N S 
+
+==========================================================================================================
+*/ 
+
+
+/*
+USRBG Profile Modals by Tropix126.
+===========================================
+If your theme heavily modifies the
+positioning for these modals, I
+suggest either messing around with
+the below variables, or writing your
+own custom code using the database.
+
+You are allowed to use this in your theme
+without prior permission from me or any
+other contributors to USRBG.
+*/
+
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
+
+.root-SR8cQa {
+  transform: translateZ(0);
+}
+.header-QKLPzZ .wrapper-3t9DeA::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  pointer-events: none;
+  background: var(--user-background) center/cover no-repeat;
+  -webkit-mask: linear-gradient(black, transparent 80%);
+}
+
+.headerInfo-30uryT,
+.tabBarItem-1b8RUP,
+.activity-1ythUs {
+  z-index: 1;
+  position: relative;
+}
+
+/*
+USRBG Popouts by Tropix126.
+===========================================
+Please note that this snippet requires basic
+transparency on the user popout in order for
+the background to be fully visible.
+
+You are allowed to use this in your theme
+without prior permission from me or any
+other contributors to USRBG.
+*/
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
+
+.userPopout-3XzG_A {
+	transform:translateZ(0);
+}
+
+.userPopout-3XzG_A .wrapper-3t9DeA::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+	opacity: .5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position) center;
+	background-image: var(--user-background);
+	-webkit-mask-image: linear-gradient(#000, transparent);
+}
+
+.userPopout-3XzG_A  .header-2BwW8b,
+.userPopout-3XzG_A  .scroller-2FKFPG,
+.userPopout-3XzG_A  .footer-1fjuF6 {
+	z-index: 1;
+}
+
 
 
 /* 
@@ -12,19 +99,19 @@ __  __ _                         _____  _                       _   _______ _
            __/ |                                                                                   
           |___/                                                        
 
-  Miyua (Discord Theme) Version: 0.02
+  Miyua (Discord Theme) Version: 0.05
     
-   Author: Miyua#3951 (395422901878390785)
+   Author: RK#3951 (395422901878390785)
     
-    Info: Miyua is just a simple little theme, named after my Discord Username. it's nothing much. it only
-          really exists to help me learn CSS as well as how to theme Discord. But i eventually hope to be 
+    Info: Miyua is just a simple little theme. it's nothing much. it only really exists to 
+          help me learn CSS as well as how to theme Discord. But i eventually hope to be 
           create better themes for people to use. 
 
-     Credits: Pavy, for being cute
-              CorellanStoma, for helping me out with CSS Questions i had
-              You, for using my theme 
+     Credits ( Thanks To ) : Pavy, for being cute ( Also Inspiring me to make my own theme ) 
+                             CorellanStoma, for helping me out
+                             You, for using my theme 
       
-       Note: I know everything below is a mess, unorganized. please don't bully?
+       Note: I know everything is a mess, unorganized. please don't bully?
 
 ============================================================================================================
 */
@@ -32,24 +119,42 @@ __  __ _                         _____  _                       _   _______ _
 
 
 :root{
-  --spotify-color: var(--bga2d) !important;  
-  /* Dark Mode Base Colors & Accents (you can easily change the colors of the dark theme below)*/ 
+ 
+/* Dark Mode Base Colors (you can easily change the colors of the dark theme below)*/ 
 
---bg2d:#141B2C; /* Secondary background color for stuff like channel list and member drawer in dark mode */
---bg1d:#1E2334; /* Main background color for stuff like chat in dark mode*/
---bgad:#0D1323; /* Main accent color of the theme in dark mode*/
---bga2d:#DE0F61; /* Secondary accent color of the theme in dark mode*/
---bga2dh:#DE0F6146;
---bga2dhsl: #de0f6215;
+--Dark_Background_001:#1E2334; /* Main background color for stuff like chat in dark mode*/
+--Dark_Background_002:#141B2C; /* Secondary background color for stuff like channel list and member drawer in dark mode */
+--Dark_Background_003:#0D1323; /* Dark background color of the theme in dark mode*/
+--Dark_Transparent_001: #141b2cef;
+--Dark_Transparent_002: #0d132383;
+
+/* Light Mode Base Colors (you can easily change the colors of the light theme below)*/
+
+--Light_Background_001: #e6e6e6;  /* Main background color for stuff like chat in light mode */
+--Light_Background_002: #d4d0ff;  /* Secondary background color for stuff like channel list and member drawer in light mode */
+--Light_Background_003: #c0c0e9;   /* Dark background color of the theme in dark mode*/
 
 
-/* Light Mode Base Colors & Accents (you can easily change the colors of the light theme below)*/
---bg2l: #fcf4e2 ;  /* Secondary background color for stuff like channel list and member drawer in light mode */
---bg1l: #fbf7ed ;  /* Main background color for stuff like chat in light mode */
---bgal: #fcefd7; /* Main accent color of the theme in dark mode*/
---bga2l: #B7174E; /* Secondary accent color of the theme in dark mode*/
---bga2lh:#DE0F6146;
---bga2lhsl: #de0f6215;
+
+/* Main Accent Colors of the theme (you can easily change the accent colors here */
+
+--Accent_001: #AA6DA3;    /* Secondary accent color of the theme */
+--Accent_002: #AA6DA346;
+--Accent_003: #AA6DA315;
+
+--Accent_004: #DE0F61;    /* Main accent color of the theme */
+--Accent_005: #DE0F6146;
+--Accent_006: #de0f6215;
+
+--Accent_007: #DB8736;    /* Third  accent color of the theme */
+--Accent_008: #DB873646;
+--Accent_009: #DB873615;
+
+
+/* Spotify Color of the theme (you can easily change the color of spotify stuff here) */
+
+--spotify-color: var(--Accent_004) !important; 
+
 }
 
 
@@ -58,29 +163,29 @@ __  __ _                         _____  _                       _   _______ _
 
 /* Applying The Dark Mode Base Colors To Discord's Dark Mode */
 .theme-dark {
---background-primary: var(--bg1d);
---background-secondary: var(--bg2d);
---background-tertiary:  var(--bg2d);
---background-secondary-alt: var(--bg2d);
---channeltextarea-background: var(--bg2d); 
---scrollbar-thin-thumb: var(--bgad);
+--background-primary: var(--Dark_Background_001);
+--background-secondary: var(--Dark_Background_002);
+--background-tertiary:  var(--Dark_Background_002);
+--background-secondary-alt: var(--Dark_Background_002);
+--background-accent: var(--Dark_Background_003);
+--channeltextarea-background: var(--Dark_Background_002); 
+--scrollbar-thin-thumb: var(--Dark_Background_003 );
 --scrollbar-thin-track: transparent;
---scrollbar-auto-thumb: var(--bgad);
+--scrollbar-auto-thumb: var(--Dark_Background_003);
 --scrollbar-auto-track: transparent;
---scrollbar-auto-scrollbar-color-thumb: var(--bgad);
---scrollbar-auto-scrollbar-color-track: var(--bg2d);
---background-message-hover: var(--bga2dh);
---background-accent: var(--bgad);
---activity-card-background: var(--bga2d);
---toast-header: var(--bgad);
---toast-contents: var(--bg2d);
---toast-background: var(--bg2d);
---deprecated-quickswitcher-input-background: var(--bgad);
---background-modifier-selected: var(--bga2dh); 
---background-modifier-hover: var(--bga2dhsl);
---background-modifier-active: var(--bga2dhsl);
---background-floating: var(--bg1d);
---deprecated-store-bg: var(--bg1d);
+--scrollbar-auto-scrollbar-color-thumb: var(--Dark_Background_003);
+--scrollbar-auto-scrollbar-color-track: var(--Dark_Background_002);
+--background-message-hover: var(--Accent_003);
+--activity-card-background: var(--Accent_004);
+--toast-header: var(--Dark_Background_003);
+--toast-contents: var(--Dark_Background_002);
+--toast-background: var(--Dark_Background_002);
+--deprecated-quickswitcher-input-background: var(--Dark_Background_003);
+--background-modifier-selected: var(--Accent_002); 
+--background-modifier-hover: var(--Accent_003);
+--background-modifier-active: var(--Accent_003);
+--background-floating: var(--Dark_Background_001);
+--deprecated-store-bg: var(--Dark_Background_001);
 }
 
 
@@ -90,27 +195,28 @@ __  __ _                         _____  _                       _   _______ _
 
 /* Applying The Light Mode Base Colors To Discord's Light Mode */
 .theme-light {
-  --background-primary: var(--bg1l);
-  --background-secondary: var(--bg2l);
-  --background-secondary-alt: var(--bga2l);
-  --background-tertiary: var(--bg2l);
-  --channeltextarea-background: var(--bg2l); 
-  --scrollbar-thin-thumb: var(--bgal);
+  --background-primary: var(--Light_Background_001);
+  --background-secondary: var(--Light_Background_002);
+  --background-tertiary: var(--Light_Background_002);
+  --background-secondary-alt: var(--Accent_001);
+  --background-accent: var(--Light_Background_003);
+  --channeltextarea-background: var(--Light_Background_002); 
+  --scrollbar-thin-thumb: var(--Light_Background_003);
   --scrollbar-thin-track: transparent;
-  --scrollbar-auto-thumb: var(--bgal);
+  --scrollbar-auto-thumb: var(--Light_Background_003);
   --scrollbar-auto-track: transparent;
-  --scrollbar-auto-scrollbar-color-thumb: var(--bgal);
-  --scrollbar-auto-scrollbar-color-track: var(--bg2l);
-  --background-accent: var(--bgal);
-  --background-message-hover: var(--bga2lh);
-  --toast-header: var(--bgal);
-  --toast-contents: var(--bg2l);
-  --toast-background: var(--bg2l);
-  --deprecated-quickswitcher-input-background: var(--bgal);
-  --background-modifier-hover: var(--bga2lhsl);
-  --background-modifier-active: var(--bga2lhsl);
-  --background-floating: var(--bg1l);
-  --deprecated-store-bg: var(--bg1l);
+  --scrollbar-auto-scrollbar-color-thumb: var(--Light_Background_003);
+  --scrollbar-auto-scrollbar-color-track: var(--Light_Background_002);
+  --background-message-hover: var(--Accent_003);
+  --toast-header: var(--Light_Background_003);
+  --toast-contents: var(--Light_Background_002);
+  --toast-background: var(--Light_Background_002);
+  --deprecated-quickswitcher-input-background: var(--Light_Background_003);
+  --background-modifier-selected: var(--Accent_002); 
+  --background-modifier-hover: var(--Accent_003);
+  --background-modifier-active: var(--Accent_002);
+  --background-floating: var(--Light_Background_001);
+  --deprecated-store-bg: var(--Light_Background_001);
 } 
 
 
@@ -133,36 +239,40 @@ __  __ _                         _____  _                       _   _______ _
 /* //////////////////////////////////////////////////////////////////////////////////////// */
 
 
- /*
+/* ----------------------------- */
+
+/*     [ CHAT/CONTENT AREA ]     */
+
+/* ----------------------------- */
 
 
-M A I N   C H A T   C O N T E N T   A R E A 
-
-
-*/
-
-
-
-/* Colors the Chat Icon Next To The Channel Name */
+/*  Colors The Chat Icon Next To The Channel Name  */
 .icon-22AiRD {
-  color: var(--bga2d);
+  color: var(--activity-card-background);
 }
-
-/* Rounding The Chat Content Area As well As Adding A Bottom Margin  */
+/*  Rounding The Chat Content Area As well As Adding A Bottom Margin  */
   .chat-3bRxxu {
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 10px;
   } 
-  
-/* Rounding The Chat Field & Search Bar, Profile Message Feild Adding A Border Radius,  */
+/*  Rounding The Chat Field & Search Bar, Profile Message Feild Adding A Border Radius  */
   .scrollableContainer-2NUZem, .searchBar-3dMhjb, .container-2fRDfG, .inputWrapper-31_8H8 {
     border-radius: 20px;
     background-color: var(--background-accent);
   } 
+/*  Remove Opacity From Chat Field When No Perms To Talk  */
+
+ .channelTextAreaDisabled-8rmlrp, .scrollableContainer-2NUZem {
+  opacity: none;
+}
+
+
   .container-2fRDfG {
     margin-bottom: 10px;
   }
 
+
+  
   .container-1r6BKw { 
    border-radius: 20px
   }  
@@ -233,23 +343,25 @@ M A I N   C H A T   C O N T E N T   A R E A
   } 
   /* User Panel Buttons Recolor */
   .button-14-BFJ {
-    color:var(--bga2d);
+    color:var(--Accent_004);
   }
 
   .theme-dark .container-1D34oG {
     background-color: var(--background-primary);
   }
 
-  /* User popout top */
+  /* [     USER POPOUT     ] */
+  
+  /* User Popout Top */
   .headerTop-3C2Zn0 {
     background-color: var(--background-accent);
   } 
-  
-  /* User popout bottom */
-
+  /* User Popout Bottom */
   .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
     background-color: var(--background-secondary);
   } 
+
+
 
   .section-2gLsgF {
     background-color: var(--background-accent);
@@ -260,11 +372,7 @@ M A I N   C H A T   C O N T E N T   A R E A
      background-color: var(--background-accent) !important;
   }
 
- /* Remove opacity from text area when no pems to talk */
 
- .channelTextAreaDisabled-8rmlrp, .scrollableContainer-2NUZem {
-   opacity: none;
- }
 
  .container-2fRDfG {
    padding-bottom: 10xp;
@@ -276,7 +384,7 @@ M A I N   C H A T   C O N T E N T   A R E A
  }
 
  /* Rounded Jump to bottom */
- .jumpToPresentBar-G1R9s6 {
+ .jumpToPresentBar-G1R9s6, .jumpToPresentBar-G1R9s6:active  {
    border-radius: 20px;
    padding-bottom: 0px;
    margin-bottom: 12px;
@@ -357,24 +465,29 @@ S E A R C H   M E N U
 }
 /* Search Menu Item Select */
 .theme-dark .option-96V44q.selected-rZcOL-, .theme-light .option-96V44q.selected-rZcOL- {
-  background-color: var(--bga2dh);
+  background-color: var(--Accent_005);
   border-radius: 40px;
 }
 /* Search Filter/Item Background */
 .theme-dark .searchFilter-2ESiM3, .theme-light .searchFilter-2ESiM3 {
-  background-color: var(--bga2d);
+  background-color: var(--Accent_004);
 }
 .theme-dark .searchAnswer-3Dz2-q, .theme-light .searchAnswer-3Dz2-q {
-  background-color: var(--bga2dh);
+  background-color: var(--Accent_005);
 }
 .theme-dark .focused-2bY0OD, .theme-light .focused-2bY0OD {
-  background-color: var(--bgad);
+  background-color: var(--deprecated-quickswitcher-input-background);
 }
 /* Calander Fix */
 .theme-dark .calendarPicker-2yf6Ci .react-datepicker, .theme-light .calendarPicker-2yf6Ci .react-datepicker {
   background-color: var(--background-primary);
 }
-
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__week .react-datepicker__day:last-of-type, .theme-light .calendarPicker-2yf6Ci .react-datepicker__week .react-datepicker__day:last-of-type {
+  background-color: var(--background-primary);
+}
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__week .react-datepicker__day:last-of-type, .theme-light .calendarPicker-2yf6Ci .react-datepicker__week .react-datepicker__day:last-of-type {
+  background-color: var(--background-secondary);
+}
 
 /* DM list person highlight */
 .selected-aXhQR6 .layout-2DM8Md {
@@ -388,7 +501,7 @@ S E A R C H   M E N U
 
 /* Message Hover */ 
 .message-2qnXI6:hover {
-  margin-left: 10px;
+  margin-left: 3px;
   border-radius: 5px;
 }
 
@@ -409,7 +522,7 @@ S E A R C H   M E N U
   
 }
 .theme-dark .container-3ayLPN, .theme-light .container-3ayLPN {
-  background-color: var(--bgad);
+  background-color: var(--deprecated-quickswitcher-input-background);
 }
 
 
@@ -437,7 +550,6 @@ S E A R C H   M E N U
 .wrapper-2jXpOf:active .content-1x5b-n {
   border-radius: 40px;
 }
-
 
 
 
@@ -510,3 +622,20 @@ F R I E N D S   P A G E
 .uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC {
   background-color: var(--background-primary);
 }
+
+
+/* User Panel Strikethrough */
+.strikethrough-1n4ekb { color: var(--Accent_001);
+  }
+
+/* Server List Highlight Selector */
+.wrapper-2jXpOf:hover .content-1x5b-n { 
+  border-radius: 40px;
+}
+
+/* Rounded toolbar popout */
+.theme-dark .root-1gCeng, .theme-light .root-1gCeng {
+  border-radius: 20px;
+}
+
+
