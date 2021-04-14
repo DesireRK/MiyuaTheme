@@ -99,7 +99,7 @@ __  __ _                         _____  _                       _   _______ _
            __/ |                                                                                   
           |___/                                                        
 
-  Miyua (Discord Theme) Version: 0.05
+  Miyua (Discord Theme) Version: 0.07
     
    Author: RK#3951 (395422901878390785)
     
@@ -122,11 +122,11 @@ __  __ _                         _____  _                       _   _______ _
  
 /* Dark Mode Base Colors (you can easily change the colors of the dark theme below)*/ 
 
---Dark_Background_001:#1E2334; /* Main background color for stuff like chat in dark mode*/
---Dark_Background_002:#141B2C; /* Secondary background color for stuff like channel list and member drawer in dark mode */
---Dark_Background_003:#0D1323; /* Dark background color of the theme in dark mode*/
---Dark_Transparent_001: #141b2cef;
---Dark_Transparent_002: #0d132383;
+--Dark_Background_001:#1E1D29; /* Main background color for stuff like chat in dark mode*/
+--Dark_Background_002:#1A1822; /* Secondary background color for stuff like channel list and member drawer in dark mode */
+--Dark_Background_003:#121216; /* Dark background color of the theme in dark mode*/
+--Dark_Transparent_001: #1A1822EF;
+--Dark_Transparent_002: #12121683;
 
 /* Light Mode Base Colors (you can easily change the colors of the light theme below)*/
 
@@ -181,7 +181,7 @@ __  __ _                         _____  _                       _   _______ _
 --toast-contents: var(--Dark_Background_002);
 --toast-background: var(--Dark_Background_002);
 --deprecated-quickswitcher-input-background: var(--Dark_Background_003);
---background-modifier-selected: var(--Accent_002); 
+--background-modifier-selected: var(--Accent_002) !important; 
 --background-modifier-hover: var(--Accent_003);
 --background-modifier-active: var(--Accent_003);
 --background-floating: var(--Dark_Background_001);
@@ -261,10 +261,23 @@ __  __ _                         _____  _                       _   _______ _
     background-color: var(--background-accent);
   } 
 /*  Remove Opacity From Chat Field When No Perms To Talk  */
-
  .channelTextAreaDisabled-8rmlrp, .scrollableContainer-2NUZem {
   opacity: none;
 }
+/* Rounded And Floating New Message Bar */
+.newMessagesBar-265mhP {
+  margin-top: 5px;
+  border-radius: 20px;
+  background-color: var(--Accent_004);
+}
+/* Spotify Color In Attatchement Area */
+.attachButtonPlay-3iJ0mf {
+  color: var(--Accent_001);
+
+
+
+
+
 
 
   .container-2fRDfG {
@@ -272,11 +285,12 @@ __  __ _                         _____  _                       _   _______ _
   }
 
 
-  
+  /* idek */
   .container-1r6BKw { 
    border-radius: 20px
   }  
   
+
 /* Server Memeber List */
   .members-1998pB, .members-1998pB>div {
     background-color: var(--background-secondary);
@@ -333,18 +347,35 @@ __  __ _                         _____  _                       _   _______ _
     padding-left: 11px;
     padding-right: 11px;
   }
+
+  /* Channel List shadows */
+  .header-2V-4Sw {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
   
   /* User Panel / Spotify */
   .panels-j1Uci_{ 
     background-color: var(--background-accent);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-top: -10px;
-    border-radius: 20px;
+    border-radius: 20px;;
   } 
   /* User Panel Buttons Recolor */
   .button-14-BFJ {
     color:var(--Accent_004);
   }
+  /* Spotify Seek Bar Recolor */
+  .powercord-spotify .spotify-seek-bar-progress {
+    background-color: var(--Accent_001); 
+  }
+ /* Rounded Status State Picker */
+ .menu-3sdvDG {
+   border-radius: 20px;
+ }
+
+
+
 
   .theme-dark .container-1D34oG {
     background-color: var(--background-primary);
@@ -370,8 +401,14 @@ __  __ _                         _____  _                       _   _______ _
   /* DM list Search */
   .searchBarComponent-32dTOx {
      background-color: var(--background-accent) !important;
+  
   }
-
+  /* pp */
+  .searchBar-6Kv8R2 {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 40px !important;
+  }
 
 
  .container-2fRDfG {
@@ -574,13 +611,11 @@ S T O R E   P A G E
  
 
 
-/* 
+/* ------------------------ */
 
+/*     [ LIBRARY PAGE ]     */
 
-L I B A R Y   P A G E 
-
-
-*/
+/* ------------------------ */
 
 
 
@@ -591,24 +626,27 @@ L I B A R Y   P A G E
 
 
 
-/* 
+/* ------------------------ */
 
+/*     [ FRIENDS PAGE ]          
+      ( Wait, people have 
+      friends and actually 
+        see this page-? )
 
-F R I E N D S   P A G E 
-
-
-*/
+/* ------------------------- */
 
 /* Activity Highlight */ 
 .theme-dark .outer-1AjyKL.interactive-3B9GmY:hover, .theme-light .outer-1AjyKL.interactive-3B9GmY:hover {
   background-color: var(--background-message-hover);
   border-radius: 20px;
 }
-
 /* Person List Hightlight */
 .peopleListItem-2nzedh:hover {
   border-radius: 20px;
 }
+
+
+
 
 /* DM list person highlight */
 .clickable-1JJAn8:hover .layout-2DM8Md {
